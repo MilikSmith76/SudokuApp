@@ -1,0 +1,66 @@
+.frontend-body {
+  background-color: whitesmoke;
+}
+
+.frontend-navbar {
+  color: white;
+  font-weight: bold;
+  justify-content: center !important;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px #999;
+}
+
+.frontend-btn-row {
+  justify-content: center;
+}
+
+.frontend-btn-col {
+  padding: 0.5% !important;
+}
+
+.frontend-font {
+  color: white !important;
+}
+
+.frontend-btn-focus {
+  background-color: white;
+  border: solid !important;
+  color: black;
+  font-weight: bold !important;
+}
+
+.refresh-btn {
+  color: white !important;
+  display: flex;
+  justify-content: center !important;
+}
+
+.frontend-spinner-container {
+  padding: 30%;
+}
+
+.frontend-spinner {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.color-choice-0 {
+  background-color: red !important;
+}
+
+.color-choice-1 {
+  background-color: blue !important;
+}
+
+.color-choice-2 {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+.color-choice-3 {
+  background-color: green !important;
+}
+
+.color-choice-4 {
+  background-color: purple !important;
+}

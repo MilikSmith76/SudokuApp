@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row frontend-btn-row" *ngFor="let row of counter">
+    <div class="frontend-btn-col" *ngFor="let col of counter">
+
+        <!--Unfocused Button-->
+        <a *ngIf="focus !== row * 9 + col" class="btn btn-lg frontend-font color-choice-{{ colorId }}" (click)="onClick(row * 9 + col)">{{ sudokuGrid[row * 9 + col] }}</a>
+
+        <!--Focused Button-->
+        <a *ngIf="focus === row * 9 + col" class="btn btn-lg frontend-btn-focus" (click)="onClick(row * 9 + col)">{{ sudokuGrid[row * 9 + col] }}</a>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>

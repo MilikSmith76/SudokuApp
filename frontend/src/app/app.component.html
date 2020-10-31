@@ -1,0 +1,39 @@
+<div class="frontend-body">
+
+  <nav class="navbar navbar-dark frontend-navbar color-choice-{{ colorId }}">
+    <a class="navbar-brand" (click)="colorChange()"> Sudoku App</a>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <!--Error Alert-->
+    <div *ngIf="!success" class="alert frontend-font color-choice-{{ colorId }}" role="alert">
+      <label>
+        An error has occurred! Please click the "refresh" button to get a new grid.
+      </label>
+      <br>
+      <label *ngIf="focus > -1">
+        Choosen fixed position is being ignored on refresh.
+      </label>
+    </div>
+
+    <!--Sudoku Grid-->
+    <app-grid *ngIf="!loading" [sudokuGrid]="sudokuGrid" [colorId]="colorId" [focus]="focus" (focusEmitter)="gridClick($event)"></app-grid>
+
+    <!--Loading Spinner-->
+    <div *ngIf="loading" class="d-flex justify-content-center frontend-spinner-container">
+      <div class="spinner-border frontend-spinner" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!--Refresh Button-->
+  <div class="text-center">
+    <a class="btn btn-dark refresh-btn" (click)="refresh()">Refresh</a>
+  </div>
+
+</div>
